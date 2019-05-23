@@ -126,6 +126,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataAccess\SqlDataAccess.cs" />
+    <Compile Include="DataManager\CountryManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,9 +177,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\Registration.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataManager\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
