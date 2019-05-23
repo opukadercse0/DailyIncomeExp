@@ -9,7 +9,7 @@ using Dapper;
 
 namespace DailyIncomeExp.DataAccess
 {
-    public class SqlDataAccess
+    public static class SqlDataAccess
     {
         //IDBconnection -===Represents an open connection to a data source,
         //and is implemented by .NET Framework data providers
@@ -29,7 +29,7 @@ namespace DailyIncomeExp.DataAccess
         //for loading data
         public static List<T> LoadData<T>(string sql)
         {
-            using (IDbConnection cnn=new SqlConnection(GetConnectionString()))
+            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 return cnn.Query<T>(sql).ToList();
             }

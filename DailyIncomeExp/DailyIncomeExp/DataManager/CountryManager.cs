@@ -7,11 +7,11 @@ using DailyIncomeExp.Models;
 
 namespace DailyIncomeExp.DataManager
 {
-    public class CountryManager
+    public static class CountryManager
     {
-        public List<CountryModel> LoadCountry()
+        public static List<CountryModel> LoadCountry()
         {
-            string sql = "Select * From Country";
+            string sql = "SELECT * FROM Country";
             return SqlDataAccess.LoadData<CountryModel>(sql);
         }
     }
