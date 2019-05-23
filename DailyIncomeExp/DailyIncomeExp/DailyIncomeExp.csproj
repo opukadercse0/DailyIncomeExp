@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -122,6 +125,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DataAccess\SqlDataAccess.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,7 +177,6 @@
     <Content Include="Views\User\Registration.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataAccess\" />
     <Folder Include="DataManager\" />
   </ItemGroup>
   <ItemGroup>
