@@ -11,6 +11,10 @@ namespace DailyIncomeExp.Controllers
 {
     public class UserController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
         //Registration
         [HttpGet]
         public ActionResult Registration()
@@ -59,6 +63,12 @@ namespace DailyIncomeExp.Controllers
                 ModelState.AddModelError("InvalidLogIn","Ivalid log In Information");
             }
             return View();
+        }
+
+        //log out
+        public ActionResult LogOut()
+        {
+            return RedirectToAction("LogIn", "User");
         }
 
     }
