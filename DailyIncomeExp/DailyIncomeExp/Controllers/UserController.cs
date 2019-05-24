@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DailyIncomeExp.DataManager;
+using DailyIncomeExp.Models;
 
 namespace DailyIncomeExp.Controllers
 {
@@ -12,11 +13,29 @@ namespace DailyIncomeExp.Controllers
         //Registration
         [HttpGet]
         public ActionResult Registration()
+
+
+
         {
             ViewBag.CountryList = CountryManager.LoadCountry();
             return View();
         }
-        //Login
        
+        [HttpPost]
+        public ActionResult Registration(CompanyModel data)
+
+        {
+            bool issSaved=CompanyManager.SaveCompany(data);
+            if (issSaved)
+            {
+                ViewBag.Message = "Your Registration Completed!";
+                return View();
+            }
+            ViewBag.CountryList = CountryManager.LoadCountry();
+            return View();
+        }
+
+        //Login
+
     }
 }

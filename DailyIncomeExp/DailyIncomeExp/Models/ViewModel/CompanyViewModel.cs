@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DailyIncomeExp.Models.ViewModel
 {
-    public class CompanyViewModel
+    public class  CompanyViewModel
     {
         [Display(Name = "CompanyName")]
         [Required]
@@ -22,8 +22,9 @@ namespace DailyIncomeExp.Models.ViewModel
         [MinLength(6,ErrorMessage = "Insert at least 6 character password")]
         public string Password { get; set; }
        
-        [Display(Name = "AgainPassword")]
+        [Display(Name = "ConfirmPassword")]
         [Required]
+        [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Confirm password doesn't match to the password")]
         public string AgainPassword { get; set; }
 
@@ -31,7 +32,7 @@ namespace DailyIncomeExp.Models.ViewModel
         [Required]
         public string Address { get; set; }
 
-        [Display(Name = "CompanyId")]
+        [Display(Name = "Country")]
         [Required]
         public int CountryId { get; set; }
     }

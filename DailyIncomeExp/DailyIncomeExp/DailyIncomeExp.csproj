@@ -126,6 +126,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataAccess\SqlDataAccess.cs" />
+    <Compile Include="DataManager\CompanyManager.cs" />
     <Compile Include="DataManager\CountryManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
