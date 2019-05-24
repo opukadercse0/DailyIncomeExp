@@ -129,6 +129,7 @@
     <Compile Include="DataAccess\SqlDataAccess.cs" />
     <Compile Include="DataManager\CompanyManager.cs" />
     <Compile Include="DataManager\CountryManager.cs" />
+    <Compile Include="DataManager\LogInManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -47,6 +47,17 @@ namespace DailyIncomeExp.Controllers
         [HttpPost]
         public ActionResult LogIn(LogInViewModel login)
         {
+            login.Password = Crypto.Hash(login.Password);
+            CompanyModel data=LogInManager.ValidateLogin(login);
+            if (data !=null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ViewBag.Message = "Log In Invalid";
+                ModelState.AddModelError("InvalidLogIn","Ivalid log In Information");
+            }
             return View();
         }
 
