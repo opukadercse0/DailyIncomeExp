@@ -26,6 +26,8 @@ namespace DailyIncomeExp.Controllers
         public ActionResult Registration(CompanyModel data)
 
         {
+            //password hashing
+            data.Password = Crypto.Hash(data.Password);
             bool issSaved=CompanyManager.SaveCompany(data);
             if (issSaved)
             {
