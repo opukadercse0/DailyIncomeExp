@@ -15,7 +15,7 @@ namespace DailyIncomeExp.Models.ViewModel
         [Display(Name = "CompaniEmail")]
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string CompaniEmail { get; set; }
+        public string CompanyEmail { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DailyIncomeExp.DataManager;
 using DailyIncomeExp.Models;
+using DailyIncomeExp.Models.ViewModel;
 
 namespace DailyIncomeExp.Controllers
 {
@@ -36,6 +37,16 @@ namespace DailyIncomeExp.Controllers
         }
 
         //Login
+        [HttpGet]
+        public ActionResult LogIn()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult LogIn(LogInViewModel login)
+        {
+            return View();
+        }
 
     }
 }
